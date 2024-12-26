@@ -1,7 +1,7 @@
 # ンナﾝﾅ
 
 ```ts
-import { annann, nnanna, nnannaSyllabary } from ".";
+import { annann, nnanna } from "nnanna";
 
 nnanna("hi")
 // "ンンンナﾝﾅﾅ!ンンナﾝﾅﾅ"
