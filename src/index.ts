@@ -15,7 +15,7 @@ export function nnanna(input: string): string {
   const enc = new TextEncoder();
   return [...input]
     .map((c) => {
-      return [...enc.encode(c)].map((n) => nnannaSyllabary[n]).join("ﾂ");
+      return [...enc.encode(c)].map((n) => nnannaSyllabary[n]).join("ｯ");
     })
     .join("!");
 }
@@ -26,7 +26,7 @@ export function annann(input: string): string {
   return chars
     .map((ch) =>
       dec.decode(
-        new Uint8Array(ch.split("ﾂ").map((c) => annannSyllabary.get(c)!))
+        new Uint8Array(ch.split("ｯ").map((c) => annannSyllabary.get(c)!))
       )
     )
     .join("");
