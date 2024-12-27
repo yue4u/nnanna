@@ -6,10 +6,12 @@ export const getNnannaSyllabary = (): string[] => {
   );
 };
 
-export const nnannaSyllabary = getNnannaSyllabary();
-export const annannSyllabary = new Map(nnannaSyllabary.map((n, i) => [n, i]));
+export const nnannaSyllabary: string[] = getNnannaSyllabary();
+export const annannSyllabary: Map<string, number> = new Map(
+  nnannaSyllabary.map((n, i) => [n, i])
+);
 
-export function nnanna(input: string) {
+export function nnanna(input: string): string {
   const enc = new TextEncoder();
   return [...input]
     .map((c) => {
@@ -18,7 +20,7 @@ export function nnanna(input: string) {
     .join("!");
 }
 
-export function annann(input: string) {
+export function annann(input: string): string {
   const dec = new TextDecoder();
   const chars = input.split("!");
   return chars
